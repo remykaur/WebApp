@@ -18,10 +18,10 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore ${{github.workspace}}/WebApp/WebApp/WebApp.csproj
+      run: dotnet restore ${{github.workspace}}/WebApp/WebApp.csproj
     - name: Build
-      run: dotnet build ${{github.workspace}}/WebApp/WebApp/WebApp.csproj --no-restore
+      run: dotnet build ${{github.workspace}}/WebApp/WebApp.csproj --no-restore
     - name: Test
-      run: dotnet test ${{github.workspace}}/WebApp/WebApp/WebApp.csproj --no-build --verbosity normal
+      run: dotnet test ${{github.workspace}}/WebApp/WebApp.csproj --no-build --verbosity normal
     - name: publish
-      run: dotnet publish ${{github.workspace}}/WebApp/WebApp/WebApp.csproj Release -o dotnetwebapp
+      run: dotnet publish ${{github.workspace}}/WebApp/WebApp.csproj Release -o dotnetwebapp
